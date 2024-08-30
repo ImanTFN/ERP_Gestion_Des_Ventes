@@ -1,0 +1,89 @@
+<div class="modal fade" id="addSalesReport" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/salesReports" method="post" class="salesReportForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary salesReportForm-title">
+                        New Sale Report
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-4">
+                            <label for="date">DATE</label>
+                            <input type="date" class="form-control salesReportForm-date" name="date" required />
+                        </div>
+                        <div class="col-4">
+                            <label for="invoice_id">Invoice ID</label>
+                            <input type="text" class="form-control salesReportForm-invoice_id" name="invoice_id" placeholder="Saisir Invoice ID" required maxlength="100" />
+                        </div>
+                        
+
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="invoice_details_id">Invoice Details ID</label>
+                            <input type="text" class="form-control salesReportForm-invoice_details_id" name="invoice_details_id" placeholder="Saisir Invoice Details ID" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="customer_id">Customer ID</label>
+                            <input type="text" class="form-control salesReportForm-customer_id" name="customer_id" placeholder="Saisir le Customer ID" required maxlength="100"></input>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="supplier_id">Supplier ID</label>
+                            <input type="text" class="form-control salesReportForm-supplier_id" name="supplier_id" placeholder="Saisir le Supplier ID" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="product_id">Product ID</label>
+                            <input type="text" class="form-control salesReportForm-product_id" name="product_id" placeholder="Saisir le Product ID" required maxlength="100" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="product_model">Product Model</label>
+                            <input type="text" class="form-control salesReportForm-product_model" name="product_model" placeholder="Saisir le Product Model" required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="product_name">Product Name</label>
+                            <input type="text" class="form-control salesReportForm-product_name" name="product_name" placeholder="Saisir le Product Name" required maxlength="255" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" class="form-control salesReportForm-quantity" name="quantity" placeholder="Saisir la quantity" required />
+                        </div>
+                        <div class="col-4">
+                            <label for="sell_rate">Sell Rate</label>
+                            <input type="text" class="form-control salesReportForm-sell_rate" name="sell_rate" placeholder="Saisir le Sale Rate" required />
+                        </div>
+                        <div class="col-4">
+                            <label for="supplier_rate">Supplier Rate</label>
+                            <input type="text" class="form-control salesReportForm-supplier_rate" name="supplier_rate" placeholder="Saisir le supplier Rate" required />
+                        </div>
+
+                </div>
+<!--
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>-->
+            </form>
+        </div>
+    </div>
+</div>

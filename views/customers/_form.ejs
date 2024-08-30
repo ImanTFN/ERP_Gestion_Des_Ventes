@@ -1,0 +1,64 @@
+<div class="modal fade" id="addCustomer" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/customers" method="post" class="customerForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary customerForm-title">
+                        New Customer
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-4">
+                            <label for="customer_id">ID</label>
+                            <input type="text" class="form-control customerForm-customer_id" name="customer_id" placeholder="Tapez l'ID" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="customer_name">Name</label>
+                            <input type="text" class="form-control customerForm-customer_name" name="customer_name" placeholder="Saisir le Name" required maxlength="255" />
+                        </div>
+                        
+
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="customer_mobile">Mobile </label>
+                            <input type="text" class="form-control customerForm-customer_mobile" name="customer_mobile" placeholder="Saisir le mobile" />
+                        </div>
+                        <div class="col-8">
+                            <label for="customer_address">Address</label>
+                            <textarea type="text" class="form-control customerForm-customer_address" name="customer_address" placeholder="address" required maxlength="255"></textarea>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-8">
+                            <label for="customer_email">Email</label>
+                            <input type="text" class="form-control customerForm-customer_email" name="customer_email" placeholder="Saisir l'email" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="status">Status</label>
+                            <input type="text" class="form-control customerForm-status" name="status" placeholder="Status" required maxlength="100" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

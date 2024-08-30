@@ -1,0 +1,103 @@
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+          <!-- sideBar -->
+          <%- include('../modules/_sidebar'); %>
+          <!-- / sideBar -->
+  
+          <!-- Layout container -->
+          <div class="layout-page">
+            <!-- Navbar -->
+            <%- include('../modules/_navbar'); %>
+            <!-- / Navbar -->
+  
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+              <!-- Content -->
+  
+              <div class="container-xxl flex-grow-1 container-p-y">
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="row my-5">
+                        <!---->
+                <h3 class="fs-4 mb-3" style="text-align: center;">Sales Reports</h3>
+                <!--
+<div class="container">
+    <button type="button" class="btn btn-lg btn-outline-dark" data-toggle="modal" data-target="#addSalesReport">New Sales Report</button>
+</div>-->
+
+<div class="container"></div>
+<%- include('../modules/_alert'); %>
+    </div>
+
+
+        <div class="table-responsive">
+            <table id="datatable" class="table table-bordered table-hover table-dark">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Date</th>
+                        <th>Invoice ID</th>
+                        <th>Invoice Details ID</th>
+                        <th>Supplier ID</th>
+                        <th>Product ID</th>
+                        <th>Product Model</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Sell Rate</th>
+                        <th>Supplier Rate</th>
+                       <!-- <th class="text-center not-export-col">Actions</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(locals.srs){srs.forEach((srs) => { %>
+                    <tr>
+                        <td>
+                            <%= srs.date; %>
+                        </td>
+                        <td>
+                            <%= srs.invoice_id; %>
+                        </td>
+                        <td>
+                            <%= srs.invoice_details_id; %>
+                        </td>
+                        <td>
+                            <%= srs.supplier_id; %>
+
+                        </td>
+                        <td>
+                            <%= srs.product_id; %>
+                        </td>
+
+                        <td>
+                            <%= srs.product_model; %>
+                        </td>
+
+                        <td>
+                            <%= srs.product_name; %>
+                        </td>
+
+                        <td>
+                            <%= srs.quantity; %>
+                        </td>
+
+                        <td>
+                            <%= srs.sell_rate; %>
+                        </td>
+
+                        <td>
+                            <%= srs.supplier_rate; %>
+                        </td>
+<!--
+                        <td width="90px" class="table__actions text-center" data-item-id="<%= srs._id %>">
+                            <a href="#" class="btn-sm btn-primary salesReportEditButton" data-toggle="modal" data-item-id="<%= srs._id %>" data-target="#addSalesReport"><i class="fa fa-edit"></i>Edit</a>
+                            <a class="btn-sm btn-danger" href="#" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-times"></i>Supp.</a>
+                        </td>-->
+                    </tr>
+          <% })} %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><!---->
+</div>
+<!-- / Content -->

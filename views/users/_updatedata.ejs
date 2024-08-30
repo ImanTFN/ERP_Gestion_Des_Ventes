@@ -1,0 +1,76 @@
+<div class="modal fade" id="updateUser" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/users" method="post" class="userForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary userForm-title">
+                        Update User
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-4">
+                            <label for="user_id">User ID</label>
+                            <input type="text" class="form-control userForm-user_id" name="user_id" placeholder="Tapez l'ID" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="username">User Name</label>
+                            <input type="text" class="form-control userForm-username" name="username" placeholder="Saisir le User Name" required maxlength="255" />
+                        </div>
+                        <div class="col-4">
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control userForm-password" name="password" placeholder="Saisir le password" required maxlength="255" />
+                        </div>
+                        
+
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control userForm-last_name" name="last_name" placeholder="Saisir le Last Name" />
+                        </div>
+                        <div class="col-4">
+                            <label for="first_name">First Name</label>
+                            <textarea type="text" class="form-control userForm-first_name" name="first_name" placeholder="Saisir le First Name" required maxlength="255"></textarea>
+                        </div>
+                        <div class="col-4">
+                            <label for="gender">Gender</label>
+                            <textarea type="text" class="form-control userForm-gender" name="gender" placeholder="Saisir le gender" required maxlength="255"></textarea>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="date_of_birth">Date Of Birth</label>
+                            <input type="date" class="form-control userForm-date_of_birth" name="date_of_birth" placeholder="Saisir Date Of Birth" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="security_code">Security Code</label>
+                            <input type="text" class="form-control userForm-security_code" name="security_code" placeholder="Security Code" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="status">Status</label>
+                            <input type="text" class="form-control userForm-status" name="status" placeholder="Status" required maxlength="100" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

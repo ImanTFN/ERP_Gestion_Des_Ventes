@@ -1,0 +1,15 @@
+<%  if(successMsg) {%>
+    <div class="alert alert-box alert-success alert-dismissible fade show" role="alert" style="margin-top: 15px;">
+        <%= successMsg  %>
+            <button type="button" class="close btn btn-outline-success" style="float:right" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <% } if(errorMsg) {%>
+        <div class="alert alert-box alert-danger alert-dismissible fade show" style="float:right" role="alert" style="margin-top: 15px;">
+            <%= errorMsg %>
+                <button type="button" class="close btn btn-outline-danger" style="float: right;" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true"  style="float: right;">&times;</span>
+            </button>
+        </div>
+        <%  } %>

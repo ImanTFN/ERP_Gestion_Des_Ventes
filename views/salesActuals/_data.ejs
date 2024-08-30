@@ -1,0 +1,75 @@
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+          <!-- sideBar -->
+          <%- include('../modules/_sidebar'); %>
+          <!-- / sideBar -->
+  
+          <!-- Layout container -->
+          <div class="layout-page">
+            <!-- Navbar -->
+            <%- include('../modules/_navbar'); %>
+            <!-- / Navbar -->
+  
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+              <!-- Content -->
+  
+              <div class="container-xxl flex-grow-1 container-p-y">
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="row my-5">
+                        <!---->
+                        <h3 class="fs-4 mb-3" style="text-align: center;">Recent Sales</h3>
+            <!--   <div class="container">
+                    <button type="button" class="btn btn-lg btn-outline-dark" data-toggle="modal" data-target="#addSalesActual">New Sale Actual</button>
+                </div>--> 
+                
+                <div class="container"></div>
+                <%- include('../modules/_alert'); %>
+                    </div>
+                
+                
+                <div class="container">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-bordered table-hover table-dark">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>DATE</th>
+                                        <th>Supplier ID</th>
+                                        <th>Sub Total</th>
+                                        <th>No Transection</th>
+                                       <!-- <th class="text-center col-2 not-export-col">Actions</th>-->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% if(locals.sls){sls.forEach((sls) => { %>
+                                    <tr>
+                                        <td>
+                                            <%= sls.DATE; %>
+                                        </td>
+                                        <td>
+                                            <%= sls.supplier_id; %>
+                                        </td>
+                                        <td>
+                                            <%= sls.sub_total; %>
+                                        </td>
+                                        <td>
+                                            <%= sls.no_transection; %>
+                                        </td>
+                                        <!--
+                                        <td width="90px" class="table__actions text-center" data-item-id="<%= sls._id %>">
+                                            <a href="#" class="btn-sm btn-primary salesActualEditButton" data-toggle="modal" data-item-id="<%= sls._id %>" data-target="#addSalesActual"><i class="fa fa-edit"></i>Edit</a>
+                                            <a class="btn-sm btn-danger" href="#" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-times"></i>Supp.</a>
+                                        </td>-->
+                                    </tr>
+                          <% })} %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                        <!---->
+            </div>
+            <!-- / Content -->

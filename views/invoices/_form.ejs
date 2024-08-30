@@ -1,0 +1,86 @@
+<div class="modal fade" id="addInvoice" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/invoices" method="post" class="invoiceForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary invoiceForm-title">
+                        New Invoice
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <label for="invoice_id">ID</label>
+                            <input type="text" class="form-control invoiceForm-invoice_id" name="invoice_id" placeholder="Tapez l'ID" required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="customer_id">Customer ID</label>
+                            <input type="text" class="form-control invoiceForm-customer_id" name="customer_id" placeholder="Saisir le Customer ID" required maxlength="255" />
+                        </div>
+                        
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="date">DATE</label>
+                            <input type="date" class="form-control invoiceForm-date" name="date" />
+                        </div>
+                        <div class="col-6">
+                            <label for="total_amount">Total Amount</label>
+                            <input type="text" class="form-control invoiceForm-total_amount" name="total_amount" placeholder="Total Amount" required maxlength="255"/>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="invoice">Invoice</label>
+                            <input type="text" class="form-control invoiceForm-invoice" name="invoice" placeholder="Saisir l'invoice" required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="invoice_discount">Invoice Discount</label>
+                            <input type="text" class="form-control invoiceForm-invoice_discount" name="invoice_discount" placeholder="Invoice Discount" required maxlength="100" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="total_discount">Total Discount</label>
+                            <input type="text" class="form-control invoiceForm-total_discount" name="total_discount" placeholder="Saisir le Total Discount" required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="total_tax">Total Tax</label>
+                            <input type="text" class="form-control invoiceForm-total_tax" name="total_tax" placeholder="Total Tax" required maxlength="100" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="invoice_details">Invoice Details</label>
+                            <input type="text" class="form-control invoiceForm-invoice_details" name="invoice_details" placeholder="Saisir l'Invoice Details" required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="status">Status</label>
+                            <input type="text" class="form-control invoiceForm-status" name="status" placeholder="Status" required maxlength="100" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

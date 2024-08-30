@@ -1,0 +1,80 @@
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+          <!-- sideBar -->
+          <%- include('../modules/_sidebar'); %>
+          <!-- / sideBar -->
+  
+          <!-- Layout container -->
+          <div class="layout-page">
+            <!-- Navbar -->
+            <%- include('../modules/_navbar'); %>
+            <!-- / Navbar -->
+  
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+              <!-- Content -->
+  
+              <div class="container-xxl flex-grow-1 container-p-y">
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="row my-5">
+                        <!---->
+                <h3 class="fs-4 mb-3" style="text-align: center;">Recent Customers</h3>
+                <% if(locals.countCustomers){countCustomers.exec((countCustomers) => { %>
+                <h3><%= countCustomers; %></h3>
+                <% })} %>
+                <div class="container">
+                    <button type="button" class="btn btn-lg btn-outline-dark" data-toggle="modal" data-target="#addCustomer">New Customer</button>
+                </div>
+                <div class="container"></div>
+                    <%- include('../modules/_alert'); %>
+                </div>
+                    <br>
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-bordered table-hover table-dark">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="col-1">ID</th>
+                                        <th class="col-2">Name</th>
+                                        <th class="col-2">Address</th>
+                                        <th class="col-1">Mobile</th>
+                                        <th class="col-2">Email</th>
+                                        <th class="col-1">Status</th>
+                                        <th class="text-center col-2 not-export-col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% if(locals.cstrs){cstrs.forEach((cstrs) => { %>
+                                    <tr>
+                                        <td>
+                                            <%= cstrs.customer_id; %>
+                                        </td>
+                                        <td>
+                                            <%= cstrs.customer_name.toUpperCase(); %>
+                                        </td>
+                                        <td>
+                                            <%= cstrs.customer_address; %>
+                                        </td>
+                                        <td>
+                                            <%= cstrs.customer_mobile; %>
+                                        </td>
+                                        <td>
+                                            <%= cstrs.customer_email; %>
+                                        </td>
+                                        <td>
+                                            <%= cstrs.status; %>
+                                        </td>
+                                        <td width="90px" class="table__actions text-center" data-item-id="<%= cstrs._id %>">
+                                            <a href="#" class="btn-sm btn-primary customerEditButton" data-toggle="modal" data-item-id="<%= cstrs._id %>" data-target="#updateCustomer"><i class="fa fa-edit"></i>Edit</a>
+                                            <a class="btn-sm btn-danger" href="#" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-times"></i>Supp.</a>
+                                        </td>
+                                    </tr>
+                        <% })} %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div><!---->
+            </div>
+            <!-- / Content -->

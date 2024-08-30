@@ -1,0 +1,71 @@
+<div class="modal fade" id="addProductsReturn" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/productsReturns" method="post" class="productsreturnForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary productsreturnForm-title">
+                        New product return
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <label for="return_id">Return Id</label>
+                            <input type="text" class="form-control productsreturnForm-return_id" name="return_id" required />
+                        </div>
+                        <div class="col-6">
+                            <label for="product_id">Product ID</label>
+                            <input type="text" class="form-control productsreturnForm-product_id" name="product_id" required maxlength="100" />
+                        </div>
+                        
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="invoice_id">Invoice ID</label>
+                            <input type="text" class="form-control productsreturnForm-invoice_id" name="invoice_id"  required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="date_sale">Date Sale</label>
+                            <input type="date" class="form-control productsreturnForm-date_sale" name="date_sale"  required maxlength="100"></input>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="date_return">Date Return</label>
+                            <input type="date" class="form-control productsreturnForm-date_return" name="date_return"  required maxlength="100" />
+                        </div>
+                        <div class="col-6">
+                            <label for="customer_id">Customer Id</label>
+                            <input type="text" class="form-control productsreturnForm-customer_id" name="customer_id"  required maxlength="100" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="reason">Reason</label>
+                            <input type="text" class="form-control productsreturnForm-reason" name="reason" required maxlength="100" />
+                        </div>
+                    </div>
+
+                   
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

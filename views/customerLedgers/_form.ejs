@@ -1,0 +1,100 @@
+<div class="modal fade" id="addCustomerLedger" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/customerLedgers" method="post" class="customerLedgerForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary customerLedgerForm-title">
+                        New Customer Ledger
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-4">
+                            <label for="id">ID</label>
+                            <input type="text" class="form-control customerLedgerForm-id" name="id" placeholder="Tapez l'ID" required  />
+                        </div>
+                        <div class="col-4">
+                            <label for="transaction_id">Transaction ID</label>
+                            <input type="text" class="form-control customerLedgerForm-transaction_id" name="transaction_id" placeholder="Saisir l'ID de transaction" required  />
+                        </div>
+                        <div class="col-4">
+                            <label for="customer_id">Customer ID</label>
+                            <input type="text" class="form-control customerLedgerForm-customer_id" name="customer_id" placeholder="Saisir l'ID de Customer" required  />
+                        </div> 
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="invoice_no">Invoice NO </label>
+                            <input type="text" class="form-control customerLedgerForm-invoice_no" name="invoice_no" placeholder="Saisir le Invoice no"  />
+                        </div>
+                        <div class="col-6">
+                            <label for="receipt_no">Receipt NO</label>
+                            <input type="text" class="form-control customerLedgerForm-receipt_no" name="receipt_no" placeholder="Saisir le Reciept no" />
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="amount">Amount</label>
+                            <input type="text" class="form-control customerLedgerForm-amount" name="amount" placeholder="Saisir l'amount" required />
+                        </div>
+                        <div class="col-8">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control customerLedgerForm-description" name="description" placeholder="description" required  />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="payment_type">Payment Type</label>
+                            <input type="text" class="form-control customerLedgerForm-payment_type" name="payment_type" placeholder="Saisir le type de payement" required />
+                        </div>
+                        <div class="col-4">
+                            <label for="cheque_no">Cheque NO</label>
+                            <input type="text" class="form-control customerLedgerForm-cheque_no" name="cheque_no" placeholder="Saisir Cheque NO"  />
+                        </div>
+                        <div class="col-4">
+                            <label for="date">Date</label>
+                            <input type="date" class="form-control customerLedgerForm-date" name="date" placeholder="Saisir la date" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="receipt_from">Receipt From</label>
+                            <input type="text" class="form-control customerLedgerForm-receipt_from" name="receipt_from" placeholder="Receipt from" required />
+                        </div>
+                        <div class="col-8">
+                            <label for="status">Status</label>
+                            <input type="text" class="form-control customerLedgerForm-status" name="status" placeholder="status" required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="d_c">D_C</label>
+                            <input type="text" class="form-control customerLedgerForm-d_c" name="d_c" placeholder="Saisir le d_c" required  />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

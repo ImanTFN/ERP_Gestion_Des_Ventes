@@ -1,0 +1,101 @@
+<div class="modal fade" id="addInvoiceDetail" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="/invoiceDetails" method="post" class="invoiceDetailForm" enctype="multipart/form-data">
+
+                <div class="modal-header">
+                    <h5 class="modal-title t-primary invoiceDetailForm-title">
+                        New Invoice Details
+                    </h5>
+                    <button type="button" class="btn btn-outline-danger btn-sm close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <label for="invoice_details_id">Invoice Details ID</label>
+                            <input type="text" class="form-control invoiceDetailForm-invoice_details_id" name="invoice_details_id" placeholder="Tapez invoice details id" required maxlength="100" />
+                        </div>
+                        <div class="col-4">
+                            <label for="invoice_id">Invoice ID</label>
+                            <input type="text" class="form-control invoiceDetailForm-invoice_id" name="invoice_id" placeholder="Saisir invoice id" required maxlength="100" />
+                        </div>
+                        
+
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="product_id">Product ID </label>
+                            <input type="text" class="form-control invoiceDetailForm-product_id" name="product_id" placeholder="Saisir le product id" required maxlength="100"/>
+                        </div>
+                        <div class="col-4">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" class="form-control invoiceDetailForm-quantity" name="quantity" placeholder="saisir la quantity" />
+                        </div>
+                        <div class="col-4">
+                            <label for="rate">Rate</label>
+                            <input type="text" class="form-control invoiceDetailForm-rate" name="rate" placeholder="saisir le Rate" />
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="supplier_rate">Supplier Rate</label>
+                            <input type="text" class="form-control invoiceDetailForm-supplier_rate" name="supplier_rate" placeholder="Saisir supplier rate" />
+                        </div>
+                        <div class="col-4">
+                            <label for="total_price">Total Price</label>
+                            <input type="text" class="form-control invoiceDetailForm-total_price" name="total_price" placeholder="total_price"/>
+                        </div>
+                        <div class="col-4">
+                            <label for="discount">Discount</label>
+                            <input type="text" class="form-control invoiceDetailForm-discount" name="discount" placeholder="discount"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="discount_per">Discount Per</label>
+                            <input type="text" class="form-control invoiceDetailForm-discount_per" name="discount_per" placeholder="discount_per" maxlength="15" />
+                        </div>
+                        <div class="col-4">
+                            <label for="tax">Tax</label>
+                            <input type="text" class="form-control invoiceDetailForm-tax" name="tax" placeholder="tax"/>
+                        </div>
+                        <div class="col-4">
+                            <label for="paid_amount">Paid Amount</label>
+                            <input type="text" class="form-control invoiceDetailForm-paid_amount" name="paid_amount" placeholder="paid_amount"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-6">
+                            <label for="due_amount">Due Amount</label>
+                            <input type="text" class="form-control invoiceDetailForm-due_amount" name="due_amount" placeholder="Due amount"  />
+                        </div>
+                        <div class="col-4">
+                            <label for="status">Status</label>
+                            <input type="text" class="form-control invoiceDetailForm-status" name="status" placeholder="Status" required maxlength="2" />
+                        </div>
+                        
+
+                    </div>
+
+                </div>
+<!--
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="ic-cross"></i> Close
+                        </button>
+                    <button type="submit" class="btn btn-primary">
+                            <i class="ic-check"></i> Save
+                            Changes
+                        </button>
+                </div>-->
+            </form>
+        </div>
+    </div>
+</div>

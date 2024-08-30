@@ -1,0 +1,89 @@
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- sideBar -->
+        <%- include('../modules/_sidebar'); %>
+        <!-- / sideBar -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+          <%- include('../modules/_navbar'); %>
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-lg-12 mb-4 order-0">
+                  <div class="row my-5">
+                      <!---->
+              <h3 class="fs-4 mb-3" style="text-align: center;">Recent users</h3>
+              <div class="container">
+                  <button type="button" class="btn btn-lg btn-outline-dark" data-toggle="modal" data-target="#addUser">New User</button>
+              </div>
+              <div class="container"></div>
+                  <%- include('../modules/_alert'); %>
+              </div>
+                  <br>
+                      <div class="table-responsive">
+                          <table id="datatable" class="table table-bordered table-hover table-dark">
+                              <thead class="thead-dark">
+                                  <tr>
+                                      <th class="col-1">User ID</th>
+                                      <th class="col-2">username</th>
+                                      <th class="col-2">password</th>
+                                      <th class="col-1">last_name</th>
+                                      <th class="col-2">first_name</th>
+                                      <th class="col-1">gender</th>
+                                      <th class="col-1">date_of_birth</th>
+                                      <th class="col-2">security_code</th>
+                                      <th class="col-1">status</th>
+                                      <th class="text-center col-2 not-export-col">Actions</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <% if(locals.usrs){usrs.forEach((usrs) => { %>
+                                  <tr>
+                                      <td>
+                                          <%= usrs.user_id; %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.username; %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.password; %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.last_name.toUpperCase(); %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.first_name; %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.gender; %>
+                                      </td>
+                                      <td>
+                                        <%= usrs.date_of_birth; %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.security_code; %>
+                                      </td>
+                                      <td>
+                                          <%= usrs.status; %>
+                                      </td>
+                                      <td width="90px" class="table__actions text-center" data-item-id="<%= usrs._id %>">
+                                          <a href="#" class="btn-sm btn-primary userEditButton" data-toggle="modal" data-item-id="<%= usrs._id %>" data-target="#updateUser"><i class="fa fa-edit"></i>Edit</a>
+                                          <a class="btn-sm btn-danger" href="#" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-times"></i>Supp.</a>
+                                      </td>
+                                  </tr>
+                      <% })} %>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div><!---->
+          </div>
+          <!-- / Content -->

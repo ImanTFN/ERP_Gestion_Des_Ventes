@@ -1,0 +1,20 @@
+.title_hieg{
+    color:blue;
+    height: 60px;
+    text-align: center;
+}
+.btn_abonn {
+    float:right;
+}
+.container-fluid {
+    margin-top: 10px;
+}
+h3 {
+    text-align: center;
+}
+.row {
+    margin-top: 10px;
+}
+.img_poster {
+    width: 60px;
+}
